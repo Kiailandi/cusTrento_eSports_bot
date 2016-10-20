@@ -13,14 +13,14 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-//  ON START
+// ON START
 
 bot.onText(/\/start/, function (msg, match) {
   var name = msg.from.first_name;
   bot.sendMessage(msg.chat.id, 'Ciao, ' + name + '! Questo è il bot del CUS Trento E-Sports, progettato per rispondere alle domande più comuni.');
 });
 
-//  SOCIAL LINKS
+// SOCIAL LINKS
 
 bot.onText(/\/facebook_page/, function (msg, match) {
   var chatId = msg.chat.id;
@@ -66,7 +66,7 @@ bot.onText(/\/hitbox/, function (msg, match) {
   bot.sendMessage(chatId, resp);
 });
 
-//  GOOGLE FORMS
+// GOOGLE FORMS
 
 bot.onText(/\/join_league_of_legends/, function (msg, match) {
   var chatId = msg.chat.id;
@@ -127,7 +127,7 @@ bot.onText(/\/allenamenti/, function(msg, match){
   bot.sendMessage(chatId, resp);
 });
 
-//  EXTRA
+// EXTRA
 
 bot.onText(/\/help/, function (msg, match) {
   var chatId = msg.chat.id;
@@ -165,6 +165,32 @@ bot.onText(/\/more_info/, function (msg, match) {
 bot.onText(/\/summon_the_boss/, function (msg, match) {
   var chatId = msg.chat.id;
   var resp = "https://telegram.me/Kiailandi";
+  bot.sendMessage(chatId, resp);
+});
+
+// MEME & DANK DARK REALM
+
+bot.onText(/\/sticker_pack/, function (msg, match) {
+  var chatId = msg.chat.id;
+  var resp = "https://telegram.me/addstickers/custrentoesports";
+  bot.sendMessage(chatId, resp);
+});
+
+bot.onText(/\/magliette/, function (msg, match) {
+  var chatId = msg.chat.id;
+  var resp = "Poor Cana";
+  bot.sendMessage(chatId, resp);
+});
+
+bot.onText(/\/wall_of_text/, function (msg, match) {
+  var chatId = msg.chat.id;
+  var resp = "15 minuti";
+  bot.sendMessage(chatId, resp);
+});
+
+bot.onText(/\/mainanza/, function (msg, match) {
+  var chatId = msg.chat.id;
+  var resp = "http://plays.tv/video/56ddf39e3600f135d9/gius";
   bot.sendMessage(chatId, resp);
 });
 
