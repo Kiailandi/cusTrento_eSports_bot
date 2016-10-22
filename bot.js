@@ -194,4 +194,10 @@ bot.onText(/\/mainanza/, function (msg, match) {
   bot.sendMessage(chatId, resp);
 });
 
+bot.onText(/\/soraka/, function (msg, match) {
+  var chatId = msg.chat.id;
+  var resp = "No raga, niente multiq, devo arrivare a diamond";
+  bot.sendMessage(chatId, resp);
+});
+
 module.exports = bot;
